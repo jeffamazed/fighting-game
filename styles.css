@@ -1,7 +1,6 @@
 *, ::after, ::before {
   margin: 0;
   padding: 0;
-  border: 0;
   box-sizing: border-box;
 }
 
@@ -87,7 +86,7 @@ body {
   display: flex;
   gap: 30px;
   opacity: 1;
-  transition: 0.1s opacity ease;
+  transition: 0.3s opacity ease;
 }
 
 .prologue-container {
@@ -224,7 +223,7 @@ form input {
   height: 582px;
   border: 3px solid var(--game-border-color);
   border-radius: 10px;
-  transition: 0.1s opacity ease;
+  transition: 0.3s opacity ease;
   font-family: Bangers, Impact, sans-serif;
   user-select: none;
 }

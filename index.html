@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fury Unleashed</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  
+  </head>
+  <body>
+    <div class="page-wrapper-main">
+      <div id="start-page" class="start-page">
+        <div class="prologue-container">
+          <h1>Fury Unleashed</h1>
+          <p>Welcome to <em>Fury Unleashed</em>—a world where chaos reigns and every duel is a test of will, skill, and survival. In this brutal arena, warriors from across the realms collide, each unleashing their fury in a fight for dominance. Choose your fighter, harness their unique powers, and rise through the ranks in a clash where only the fiercest can prevail.</p>
+          <div class="prologue-images">
+            <img 
+            src="./img/start-page/samurai-mack.png"
+            class="prologue-image samurai-mack" 
+            alt="Samurai Mack" />
+            <img 
+            src="./img/start-page/kenji.png" 
+            class="prologue-image"
+            alt="Samurai Mack" />
+          </div>
+        </div>
+        
+        <form class="user-input-form">
+          <label for="round-options">
+            Battle Format:
+            <select 
+            id="round-options"
+            class="user-selection">
+              <option value="" selected>Choose format</option>
+              <option value="1">Sudden Death</option>
+              <option value="3">Best of 3</option>
+              <option value="5">Best of 5</option>
+            </select>
+          </label>
+
+          <label for="set-timer">
+            Set Timer (in seconds):
+            <input 
+            id="set-timer"
+            type="number"
+            min="1"
+            value="60" />
+          </label>
+          
+          <label for="starting-health-player-1">
+            Starting HP P1:
+            <input 
+            id="starting-health-player-1" 
+            type="number"
+            min="50"
+            step="10"
+            value="200" />
+          </label>
+          
+          <label for="starting-health-player-2">
+            Starting HP P2:
+            <input 
+            id="starting-health-player-2" 
+            type="number"
+            min="50"
+            step="10"
+            value="200" />
+          </label>
+          
+          <label for="damage-player-1">
+            Damage P1:
+            <input 
+            id="damage-player-1"
+            type="number"
+            min="1"
+            value="10" />
+          </label>
+          
+          <label for="damage-player-2">
+            Damage P2:
+            <input 
+            id="damage-player-2"
+            type="number"
+            min="1"
+            value="10" />
+          </label>
+          <label for="player-options">
+            Character P1:
+            <select 
+            id="player-options"
+            class="user-selection">
+              <option value="" selected>Choose character</option>
+              <option value="samuraiMackLeft">Samurai Mack</option>
+              <option value="kenjiLeft">Kenji</option>
+              <option value="thornBlackridgeLeft">Thorn Blackridge</option>
+              <option value="serAlindraLeft">Ser Alindra</option>
+              <option value="vireyaLeft">Vireya</option>
+              <option value="kingAlaricIronhartLeft">King Alaric Ironhart</option>
+              <option value="rodericLeft">Roderic</option>
+              <option value="drakonLeft">Drakon</option>
+              <option value="random">Random</option>
+            </select>
+          </label>
+
+          <label for="enemy-options">
+            Character P2:
+            <select 
+            id="enemy-options"
+            class="user-selection">
+              <option value="" selected>Choose character</option>
+              <option value="samuraiMackRight">Samurai Mack</option>
+              <option value="kenjiRight">Kenji</option>
+              <option value="thornBlackridgeRight">Thorn Blackridge</option>
+              <option value="serAlindraRight">Ser Alindra</option>
+              <option value="vireyaRight">Vireya</option>
+              <option value="kingAlaricIronhartRight">King Alaric Ironhart</option>
+              <option value="rodericRight">Roderic</option>
+              <option value="drakonRight">Drakon</option>
+              <option value="random">Random</option>
+            </select>
+          </label>
+          
+          <label for="crit-chance">
+            Crit Chance (0 - 0.5):
+            <input 
+            id="crit-chance"
+            type="number"
+            min="0"
+            max="0.5" 
+            step="0.01"
+            value="0.2" />  
+          </label>
+
+          <label for="crit-dmg">
+            Crit Damage (1.5 - 2.5):
+            <input 
+            id="crit-dmg"
+            type="number"
+            min="1.5"
+            max="2.5" 
+            step="0.01"
+            value="1.5" />  
+          </label>
+
+          <label for="bgm-toggle">
+            Play BGM?
+            <input 
+            id="bgm-toggle"
+            class="bgm-toggle" 
+            type="checkbox" />
+          </label>
+
+          <label for="sfx-toggle">
+            Play SFX?
+            <input 
+            id="sfx-toggle"
+            class="sfx-toggle" 
+            type="checkbox"
+            checked />
+          </label>
+          
+          <button 
+            id="start-game-btn" 
+            class="start-game-btn" 
+            aria-label="Start Game"
+          >
+          Start Game
+          </button>
+        </form>
+        <details class="info">
+          <summary>Info</summary>
+          <h2>Player One Controls:</h2>
+          <p>Use A to move left, D to move right, W to jump, C for a light attack, and V for a heavy attack.</p>
+          <h2>Player Two Controls:</h2>
+          <p>Make sure Num Lock is on. Use 4 to move left, 6 to move right, 8 to jump, "/" for a light attack, and "." for a heavy attack — both located on the QWERTY side of the keyboard.</p>
+          <h2>Instructions:</h2>
+          <ul>
+            <li>Choose a battle format.</li>
+            <li>Set timer between 1 and 600 seconds.</li>
+            <li>Set HP no less than 50.</li>
+            <li>Set damage no less than 1.</li>
+            <li>You can select your character from the available options.</li>
+            <li>Set crit chance between 0 and 0.5.</li>
+            <li>Set crit damage between 1.5 and 2.5</li>
+          </ul>
+          <h2>Note:</h2>
+          <ul>
+            <li>Heavy attacks deal double the damage of light attacks, have a chance to crit, but come with a 5-second cooldown.</li>
+            <li>Critical hits inflict 1.5 times more damage than normal by default.</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+    <div class="page-wrapper-game">
+      <div id="game" class="game-container hidden">
+        <!-- COUNTDOWN -->
+        <div id="countdown-timer" class="countdown-timer"></div>
+        <div class="hud">
+          <!-- player health-->
+          <div class="player-health-container">
+            <div class="player-health-full"></div>
+            <div id="player-health" class="player-health-curr"></div>
+            <p class="player-health-text">
+              <span id="player-health-text-curr"></span>/<span id="player-health-text-full"></span>
+            </p>
+            <div id="player-score" class="player-score"></div>
+            <p id="player-name" class="player-name">Samurai Mack</p>
+          </div>
+          <!-- timer and round-->
+          <div class="timer-round-container">
+            <div class="timer"><span id="timer"></span></div>
+            <div class="round"><span id="round">8</span></div>
+          </div>
+          <!-- enemy health -->
+          <div class="enemy-health-container">
+            <div class="enemy-health-full"></div>
+            <div id="enemy-health" class="enemy-health-curr"></div>
+            <p class="enemy-health-text">
+              <span id="enemy-health-text-full"></span>/<span id="enemy-health-text-curr"></span>
+            </p>
+            <div id="enemy-score" class="enemy-score"></div>
+            <p id="enemy-name" class="enemy-name">Samurai Mack</p>
+          </div>
+        </div>
+      
+        <!-- result -->
+        <div class="result-screen">
+          <div id="result-msg" class="result-msg"></div>
+        </div>
+        <div id="game-over" class="game-over hidden">
+          <h2>Game Over</h2>
+          <p>Want to play again?</p>
+          <div class="game-over-button-container">
+            <button 
+            id="game-over-back-btn" 
+            class="game-over-back-btn" 
+            type="button"
+            aria-label="Go Back">
+              Go Back
+            </button>
+          </div>
+        </div>
+        <canvas id="main-game" class="main-game"></canvas>
+      </div>
+    </div>
+    <script 
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer"
+    ></script>
+    
+    <script src="./js/audio.js"></script>
+    <script src="./js/character-collection.js"></script>
+    
+    <script src="./js/classes.js"></script>
+    <script src="./js/utils.js"></script>
+    
+    
+    <script src="./index.js"></script>
+    
+  </body>
+</html>

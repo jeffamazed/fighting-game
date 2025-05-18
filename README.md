@@ -1,13 +1,14 @@
 # Fighting Game
 
-A simple 2D character fighting game built with vanilla HTML, CSS, and JavaScript, with light use of [GSAP](https://greensock.com/gsap/) for animations. This project supports local multiplayer (same computer).
+A simple 2D character fighting game built with vanilla HTML, CSS, and JavaScript, with light use of [GSAP](https://greensock.com/gsap/) for animations. This project supports local multiplayer (same computer) and lets you customize your experience by choosing your character and adjusting their stats before each match.
 
 ## Features
 
 - 2D character-versus-character gameplay
 - Responsive controls for local play
 - Smooth animations powered by GSAP
-- Easily extendable with new characters, stages, or moves
+- **Character customization:** Choose your fighter and modify their stats (Health, Attack, Crit Chance, Crit Damage) to fit your playstyle
+- Easily extendable with new characters
 
 ## Getting Started
 

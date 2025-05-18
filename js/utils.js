@@ -287,7 +287,7 @@ function waitForImagesToLoad() {
         clearInterval(interval);
         resolve();
       }
-    }, 100);
+    }, 50);
   });
 }
 
@@ -297,7 +297,6 @@ function resetFighter(
   characterPos
 ) {
   const positionCopy = { ...position };
-  console.log(positionCopy)
 
   fighter.dead = false;
   fighter.position = positionCopy;

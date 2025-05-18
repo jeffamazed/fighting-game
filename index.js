@@ -555,7 +555,7 @@ function backBtnHandler() {
   activateControls = false;
   setTimeout(() => {
     restartHP(0.1);
-  }, 200);
+  }, 400);
 
   playBgm(generalBgm.lounge);
   stopBgm();
@@ -567,7 +567,6 @@ function backBtnHandler() {
 
 startGameBtn.addEventListener("click", startBtnHandler);
 backBtn.removeEventListener("click", backBtnHandler);
-
 
 document.addEventListener('click', () => {
   playBgm(generalBgm.lounge);

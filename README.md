@@ -39,7 +39,3 @@ The controls and instructions are displayed in-game when you open the project in
 ## License
 
 MIT
-
----
-
-Feel free to customize this README further to fit your project's needs!

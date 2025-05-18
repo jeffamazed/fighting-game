@@ -553,7 +553,9 @@ function backBtnHandler() {
   isGameOver = false;
   isCountdownEnds = false;
   activateControls = false;
-  restartHP(0.1);
+  setTimeout(() => {
+    restartHP(0.1);
+  }, 200);
 
   playBgm(generalBgm.lounge);
   stopBgm();
